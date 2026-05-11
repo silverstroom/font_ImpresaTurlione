@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Tipografia — Impresa Turlione</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    color: #1A1F3A;
+    background: #F5F5F7;
+    line-height: 1.5;
+    padding: 40px 20px;
+  }
+  .container { max-width: 1280px; margin: 0 auto; }
+
+  /* Header */
+  .page-header {
+    background: linear-gradient(135deg, #152E82 0%, #0E1F5A 100%);
+    color: white;
+    padding: 60px 50px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 30px rgba(21, 46, 130, 0.15);
+  }
+  .page-header .label {
+    display: inline-block;
+    background: #DE051D;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .page-header h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .page-header .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    opacity: 0.85;
+    font-weight: 300;
+  }
+
+  /* Section */
+  .section {
+    background: white;
+    border-radius: 14px;
+    padding: 40px 50px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .section h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: #152E82;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .section h2 .num {
+    background: #DE051D;
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+  }
+  .section .lead {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+  }
+
+  /* ==== TWO COLUMNS FONT SHOWCASE ==== */
+  .fonts-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .font-col {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .col-banner {
+    padding: 44px 36px 38px;
+    color: white;
+    background: linear-gradient(135deg, #152E82 0%, #0E1F5A 100%);
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .col-banner.alt {
+    background: linear-gradient(135deg, #F5F5F7 0%, #E2E5EA 100%);
+    color: #152E82;
+  }
+  .col-banner .role {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 18px;
+  }
+  .col-banner .font-display {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-size: 72px;
+  }
+  .col-banner.alt .font-display {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    letter-spacing: -2.5px;
+    text-transform: none;
+    font-size: 68px;
+  }
+  .col-banner .source-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.6;
+    margin-top: 16px;
+  }
+
+  .col-body {
+    padding: 28px 32px;
+    background: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .col-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .col-meta .item .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+  }
+  .col-meta .item .value {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #152E82;
+    font-weight: 600;
+  }
+  .col-desc {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+  .col-desc strong { color: #152E82; }
+  
+  .col-weights .weights-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #152E82;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+  .col-weights .weight-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 10px 14px;
+    background: #FAFAFA;
+    border-radius: 6px;
+    border-left: 3px solid #DE051D;
+    margin-bottom: 8px;
+  }
+  .col-weights .weight-row .weight-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #888;
+    width: 86px;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  .col-weights .weight-row.barlow .weight-sample {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    line-height: 1.1;
+    color: #1A1F3A;
+    flex: 1;
+  }
+  .col-weights .weight-row.inter .weight-sample {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.3;
+    color: #1A1F3A;
+    flex: 1;
+  }
+  
+  .w-300 { font-weight: 300; }
+  .w-400 { font-weight: 400; }
+  .w-500 { font-weight: 500; }
+  .w-600 { font-weight: 600; }
+  .w-700 { font-weight: 700; }
+  .w-800 { font-weight: 800; }
+  .w-900 { font-weight: 900; }
+
+  /* Hierarchy */
+  .hierarchy-demo {
+    background: #FAFAFA;
+    border-radius: 12px;
+    padding: 50px 60px;
+    border: 1px solid #E5E7EB;
+  }
+  .demo-h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: #152E82;
+    line-height: 1;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
+  .demo-tag {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #DE051D;
+    background: rgba(222, 5, 29, 0.08);
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .demo-h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A1F3A;
+    line-height: 1.1;
+    margin: 24px 0 8px;
+    text-transform: uppercase;
+  }
+  .demo-h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #152E82;
+    line-height: 1.2;
+    margin: 20px 0 6px;
+  }
+  .demo-body {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    color: #444;
+    margin-bottom: 12px;
+  }
+  .demo-body strong { color: #152E82; font-weight: 600; }
+  .demo-cta {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    background: #DE051D;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 14px 0;
+  }
+  .demo-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+    margin-top: 18px;
+  }
+
+  /* Table */
+  .hierarchy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #E5E7EB;
+  }
+  .hierarchy-table th {
+    background: #152E82;
+    color: white;
+    padding: 14px 18px;
+    text-align: left;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .hierarchy-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #F0F0F0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #444;
+  }
+  .hierarchy-table tr:last-child td { border-bottom: none; }
+  .hierarchy-table td strong { color: #152E82; font-weight: 600; }
+  .hierarchy-table .font-tag {
+    display: inline-block;
+    background: #F5F5F7;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #152E82;
+  }
+
+  /* Mockups */
+  .mockups-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  .mockup-card {
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .mockup-preview {
+    padding: 36px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mockup-preview.dark { background: linear-gradient(135deg, #152E82 0%, #0E1F5A 100%); color: white; }
+  .mockup-preview.light { background: #FAFAFA; }
+  .mockup-label {
+    padding: 14px 22px;
+    background: white;
+    border-top: 1px solid #E5E7EB;
+  }
+  .mockup-label h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #152E82;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+  .mockup-label p { font-family: 'Inter', sans-serif; font-size: 12px; color: #666; }
+
+  .web-headline {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .web-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 16px;
+  }
+  .web-btn {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    background: #DE051D;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    align-self: flex-start;
+  }
+
+  .card-product .tag {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: #DE051D;
+    background: rgba(222, 5, 29, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+  .card-product .title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #152E82;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .card-product .desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  .card-product .spec-list { list-style: none; margin-top: 12px; }
+  .card-product .spec-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #444;
+    padding: 4px 0;
+    border-bottom: 1px solid #F0F0F0;
+  }
+  .card-product .spec-list li strong { color: #152E82; font-weight: 600; }
+
+  .footer {
+    text-align: center;
+    padding: 28px 0 6px;
+    color: #888;
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  @media (max-width: 900px) {
+    .fonts-duo, .mockups-grid { grid-template-columns: 1fr; }
+    .col-banner .font-display { font-size: 56px; }
+    .col-banner.alt .font-display { font-size: 50px; }
+    .section { padding: 28px 24px; }
+    .page-header h1 { font-size: 44px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="page-header">
+    <span class="label">Tipografia</span>
+    <h1>Identità tipografica</h1>
+    <p class="sub">Sistema font ufficiale Impresa Turlione · Sito Web · Canva · Stampa</p>
+  </div>
+
+  <!-- 1. FONT — DUE COLONNE -->
+  <div class="section">
+    <h2><span class="num">1</span> Font ufficiali</h2>
+    <p class="lead">Il sistema tipografico di Impresa Turlione si compone di <strong>due font complementari</strong>: <strong>Barlow Condensed</strong> per i titoli (impatto industriale + richiamo segnaletico stradale) e <strong>Inter</strong> per il corpo (massima leggibilità su schermo per documenti tecnici e B2B). Entrambi <strong>disponibili gratuitamente</strong> su Google Fonts, Canva e Adobe Fonts.</p>
+    
+    <div class="fonts-duo">
+      
+      <!-- COL 1: BARLOW CONDENSED -->
+      <div class="font-col">
+        <div class="col-banner">
+          <div>
+            <div class="role">Font Titolo · Headline</div>
+            <div class="font-display">Barlow<br>Condensed</div>
+          </div>
+          <div class="source-tag">Google Fonts · Canva · Adobe Fonts — SIL Open Font License</div>
+        </div>
+        <div class="col-body">
+          <div class="col-meta">
+            <div class="item"><div class="label">Tipologia</div><div class="value">Sans-serif Grotesk Condensato</div></div>
+            <div class="item"><div class="label">Pesi disponibili</div><div class="value">18 (Thin → Black + Italic)</div></div>
+          </div>
+          <p class="col-desc">
+            <strong>Barlow Condensed</strong> trasmette autorevolezza tecnica con leggero arrotondamento delle aste. La forma condensata permette di costruire <strong>titoli forti anche con testi lunghi</strong> tipici del settore industriale, mentre il richiamo visivo alla segnaletica stradale e ai mezzi pesanti rinforza il posizionamento Turlione.
+          </p>
+          <div class="col-weights">
+            <div class="weights-title">Pesi consigliati</div>
+            <div class="weight-row barlow"><span class="weight-label">SemiBold 600</span><span class="weight-sample w-600">Sottotitoli sezione</span></div>
+            <div class="weight-row barlow"><span class="weight-label">Bold 700</span><span class="weight-sample w-700">CALCESTRUZZI CAM</span></div>
+            <div class="weight-row barlow"><span class="weight-label">ExtraBold 800</span><span class="weight-sample w-800">IMPRESA TURLIONE</span></div>
+            <div class="weight-row barlow"><span class="weight-label">Black 900</span><span class="weight-sample w-900">UNI/PdR 88:2020</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COL 2: INTER -->
+      <div class="font-col">
+        <div class="col-banner alt">
+          <div>
+            <div class="role" style="opacity: 0.5;">Font Corpo · Body</div>
+            <div class="font-display">Inter</div>
+          </div>
+          <div class="source-tag" style="opacity: 0.5;">Google Fonts · Canva · Adobe Fonts — SIL Open Font License</div>
+        </div>
+        <div class="col-body">
+          <div class="col-meta">
+            <div class="item"><div class="label">Tipologia</div><div class="value">Sans-serif Neo-grotesque</div></div>
+            <div class="item"><div class="label">Pesi disponibili</div><div class="value">9 + Variable + Italic</div></div>
+          </div>
+          <p class="col-desc">
+            <strong>Inter</strong> è progettato specificamente per la <strong>massima leggibilità su schermo</strong>. La x-height ampia, le spaziature ottimizzate e il supporto per numeri tabulari lo rendono ideale per i target B2B di Turlione: RUP, progettisti, direttori dei lavori che leggono schede tecniche e documenti di gara.
+          </p>
+          <div class="col-weights">
+            <div class="weights-title">Pesi consigliati</div>
+            <div class="weight-row inter"><span class="weight-label">Regular 400</span><span class="weight-sample w-400">Corpo paragrafo testo standard</span></div>
+            <div class="weight-row inter"><span class="weight-label">Medium 500</span><span class="weight-sample w-500">Evidenziazione moderata</span></div>
+            <div class="weight-row inter"><span class="weight-label">SemiBold 600</span><span class="weight-sample w-600">Highlight tecnici e UI</span></div>
+            <div class="weight-row inter"><span class="weight-label">Bold 700</span><span class="weight-sample w-700">Parole chiave nel testo</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. GERARCHIA -->
+  <div class="section">
+    <h2><span class="num">2</span> Gerarchia tipografica</h2>
+    <p class="lead">La gerarchia tipografica è la <strong>struttura visiva</strong> che organizza i contenuti del sito e dei materiali di comunicazione. Combina Barlow Condensed per i titoli e Inter per il corpo, generando un contrasto netto e una <strong>lettura immediata della priorità informativa</strong>.</p>
+    
+    <div class="hierarchy-demo">
+      <span class="demo-tag">CASE STUDY</span>
+      <h1 class="demo-h1">Conglomerato bituminoso ANAS SS 658</h1>
+      <h2 class="demo-h2">Manto stradale ad alto modulo</h2>
+      <p class="demo-body">Impresa Turlione ha realizzato la fornitura e la posa del conglomerato bituminoso per il <strong>tratto SS 658 Potenza-Melfi</strong>, con miscela certificata <strong>UNI EN 13108-1</strong> e percentuale di fresato riciclato del 30% in coerenza con i Criteri Ambientali Minimi del Codice degli Appalti.</p>
+      <h3 class="demo-h3">Specifiche tecniche</h3>
+      <p class="demo-body">Tappeto di usura tipo <strong>SMA 0/12</strong> con bitume modificato, prodotto presso l'impianto Marini MAP 120 E190L di Baragiano Scalo. Tracciabilità completa di filiera certificata <strong>UNI/PdR 88:2020</strong>.</p>
+      <a class="demo-cta">Richiedi scheda tecnica</a>
+      <p class="demo-caption">Foto del cantiere, ottobre 2023. Tratto stradale completato e collaudato.</p>
+    </div>
+    
+    <table class="hierarchy-table">
+      <thead>
+        <tr><th>Elemento</th><th>Font</th><th>Peso</th><th>Dimensione</th><th>Uso</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>H1</strong> Titolo pagina</td><td><span class="font-tag">Barlow Condensed</span></td><td>ExtraBold 800 / Black 900</td><td>48 – 64 px</td><td>Hero, titoli pagina principali</td></tr>
+        <tr><td><strong>H2</strong> Titolo sezione</td><td><span class="font-tag">Barlow Condensed</span></td><td>Bold 700</td><td>32 – 40 px</td><td>Apertura sezioni interne</td></tr>
+        <tr><td><strong>H3</strong> Sottotitolo</td><td><span class="font-tag">Barlow Condensed</span></td><td>SemiBold 600</td><td>22 – 26 px</td><td>Titoli paragrafi e card</td></tr>
+        <tr><td><strong>Body</strong> Paragrafo</td><td><span class="font-tag">Inter</span></td><td>Regular 400</td><td>16 – 17 px</td><td>Testo principale, schede prodotto</td></tr>
+        <tr><td><strong>Body</strong> Emphasis</td><td><span class="font-tag">Inter</span></td><td>SemiBold 600 / Bold 700</td><td>16 – 17 px</td><td>Evidenziazione parole chiave</td></tr>
+        <tr><td><strong>Caption</strong> Micro</td><td><span class="font-tag">Inter</span></td><td>Regular 400</td><td>13 – 14 px</td><td>Didascalie, note, footer</td></tr>
+        <tr><td><strong>CTA</strong> Pulsanti</td><td><span class="font-tag">Barlow Condensed</span></td><td>Bold 700 · MAIUSCOLO</td><td>14 – 16 px</td><td>Call to action, pulsanti, badge</td></tr>
+        <tr><td><strong>Tag</strong> Occhiello</td><td><span class="font-tag">Inter</span></td><td>Bold 700 · MAIUSCOLO</td><td>11 – 12 px</td><td>Categoria, badge, etichette</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 3. APPLICAZIONI -->
+  <div class="section">
+    <h2><span class="num">3</span> Applicazioni</h2>
+    <p class="lead">Esempi di applicazione del sistema tipografico su <strong>elementi reali</strong> del sito e dei materiali grafici di Turlione.</p>
+    
+    <div class="mockups-grid">
+      <div class="mockup-card">
+        <div class="mockup-preview dark">
+          <span style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase; margin-bottom: 14px;">BASILICATA · DAL 2000</span>
+          <div class="web-headline">Conglomerati<br>bituminosi e<br>calcestruzzi CAM</div>
+          <div class="web-sub">Produzione e posa diretta certificata UNI/PdR 88:2020 in tutta la Basilicata. Filiera circolare integrata con riciclo fresato.</div>
+          <a class="web-btn">Richiedi preventivo</a>
+        </div>
+        <div class="mockup-label">
+          <h4>Hero sito web</h4>
+          <p>Headline Barlow Condensed 800 + body Inter 400 + CTA Barlow Bold maiuscolo</p>
+        </div>
+      </div>
+
+      <div class="mockup-card">
+        <div class="mockup-preview light">
+          <div class="card-product">
+            <span class="tag">Prodotto · CAM</span>
+            <div class="title">Splittmastix<br>Asphalt SMA</div>
+            <div class="desc">Tappeto di usura ad alta resistenza con bitume modificato. Particolarmente adatto per pavimentazioni stradali di pregio, aree urbane ad alto traffico e tratte autostradali.</div>
+            <ul class="spec-list">
+              <li><strong>Norma:</strong> UNI EN 13108-5</li>
+              <li><strong>Pezzatura aggregati:</strong> 0/12 mm</li>
+              <li><strong>% Fresato riciclato:</strong> fino al 30%</li>
+              <li><strong>Certificazione:</strong> UNI/PdR 88:2020</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mockup-label">
+          <h4>Scheda prodotto</h4>
+          <p>Titolo Barlow Condensed 700 + dati tecnici Inter 400 con highlight SemiBold</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Sistema tipografico — Impresa Turlione S.r.l.<br>
+    A cura di: Salvo Bilotti
+  </div>
+
+</div>
+</body>
+</html>
